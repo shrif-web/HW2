@@ -1,0 +1,359 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.parent {
+  height: 100%;
+}
+
+.navStyle {
+  background-color: rgb(231, 238, 246);
+  box-shadow: 0px 10px 5px rgba(128, 128, 128, 0.575);
+  height: 80px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.night .navStyle {
+  background-color: rgb(24, 106, 165);
+  color: white;
+}
+
+.night .menu1 a {
+  color: white;
+}
+
+.night .menu2 a {
+  color: white;
+}
+
+.bottomNav {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 9999;
+  background-color: rgb(231, 238, 246);
+  box-shadow: 0px -5px 5px rgba(128, 128, 128, 0.575);
+  height: 80px;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  display: none;
+}
+.night .bottomNav {
+  background-color: rgb(24, 106, 165);
+}
+
+.night .bottomNav a {
+  color: white;
+}
+
+.headerStyle {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.navBar-items {
+  font-size: large;
+}
+
+.menu1 {
+  position: absolute;
+  margin: auto;
+}
+
+.menu2 {
+  position: absolute;
+  margin: auto;
+}
+
+.a {
+  text-align: center;
+  padding-top: 10px;
+  width: 100px;
+  height: 60px;
+}
+
+.b {
+  text-align: center;
+  width: 120px;
+  height: 30px;
+  margin: 0px 15px 10px 0px;
+}
+
+#btn {
+  width: 100px;
+}
+
+.night #btn {
+  color: white;
+  background-color: rgb(125, 180, 211);
+}
+
+.right-items:hover {
+  padding-bottom: 20px;
+  border-bottom: 5px solid rgb(24, 106, 165);
+}
+
+.night .right-items:hover {
+  border-bottom: 5px solid rgb(231, 238, 246);
+}
+
+.menu3 {
+  font-size: 0.8em;
+  padding: 1.8em;
+  background-color: rgb(24, 106, 165);
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  text-align: right;
+  color: white;
+  transition-duration: 1s;
+  z-index: 9998;
+}
+
+.night .menu3 {
+  color: rgb(24, 106, 165);
+  background-color: white;
+}
+
+.change .menu3 {
+  z-index: 9998;
+  display: block;
+}
+
+.c {
+  margin: 0.8em;
+}
+
+#night {
+  margin-left: 35px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+  margin-top: 5px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider.round {
+  border-radius: 30px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 0px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #79b7eb;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+}
+
+#topContainer .active {
+  display: none;
+}
+
+.flex-container .item {
+  align-self: center;
+}
+
+.active .flex-container {
+  display: none;
+}
+
+.flex-left-item {
+  position: absolute;
+  left: 3%;
+}
+
+.flex-right-item {
+  position: absolute;
+  right: calc(300px - 1.8em);
+}
+
+.container {
+  font-size: 0.8em;
+  padding: 1.8em;
+  width: calc(100% - 300px - 8em);
+  max-width: 1000px;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  left: 0;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  float: right;
+  flex-wrap: wrap;
+}
+
+.night .container {
+  background-color: rgb(24, 106, 165);
+}
+
+.night .parent {
+  background-color: rgb(24, 106, 165);
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+}
+
+.card {
+  float: right;
+  padding: 1%;
+  margin: 1% 0;
+  background-color: rgb(221, 230, 230);
+  width: 23%;
+}
+
+.card-image:hover {
+  box-shadow: 0 0 15px rgba(33, 33, 33, 0.74);
+}
+
+.card-image {
+  height: 200px;
+  transition: 1s;
+}
+
+.scrollable {
+  overflow: auto;
+}
+
+.inner {
+  margin: auto;
+  position: relative;
+  color: black;
+  width: inherit;
+  border: 2px solid rgb(19, 5, 15);
+  height: 1500px;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(209, 228, 243);
+  border-radius: 10px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.active .hamburger {
+  display: inline-block;
+  position: absolute;
+  left: 20px;
+  z-index: 9999;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.night .bar1 {
+  background-color: white;
+}
+.night .bar3 {
+  background-color: white;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+@media screen and (max-width: 1000px) {
+  .card {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .menu3 {
+    left: 0;
+    display: none;
+  }
+  .bottomNav {
+    display: block;
+  }
+
+  .navStyle {
+    margin-bottom: 0;
+  }
+  .card {
+    width: 75%;
+  }
+}
