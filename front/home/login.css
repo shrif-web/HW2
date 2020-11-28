@@ -1,0 +1,371 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.parent {
+  height: 100%;
+}
+
+
+
+.mainStyle {
+  background-color: rgb(231, 238, 246);
+}
+
+
+.form{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width:380px;
+	height:450px;
+	background: #fff;
+}
+
+.form .head{
+	width: 100%;
+	heigt: 55px;
+	display:flex;
+}
+
+.form .head > div{
+	width: 50%;
+	height: 100%;
+	text-align: center;
+	padding: 5px;
+	font-size: 22px;
+	color: rgb(24, 106, 165);
+	line-height: 40px;
+	cursor: pointer;
+	background: transparent;
+}
+
+.form .head .signup > div:nth-child(1), .form .head > div:nth-child(1) {
+	background: rgb(197, 221, 232);
+	color: rgb(80, 143, 171);
+	transition: all .3s ease-in-out;
+}
+
+.form .head .signup > div:nth-child(2) {
+	background: transparent;
+	transition: all .3s ease-in-out;
+}
+
+.form .body{
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+.form .body > div{
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all .3s ease-in-out;
+}
+
+.form .body .form-row {
+	border-top: 1px solid #fff;
+}
+
+.form .body .form-row input{
+	width: 300px;
+	height:50px;
+	margin: 5px;
+	margin-top: 10px;
+	font-size: 15px;
+	text-indent: 38px;
+	border: 1px solid rgb(127, 179, 212);
+	color: rgb(24, 106, 165);
+}
+
+.form .body .form-row button{
+	width: 300px;
+	height:50px;
+	margin: 5px;
+	margin-top: 10px;
+	font-size: 15px;
+	text-align: center;
+	outline: none;
+	border: none;
+	color: #fff;
+	background: rgb(24, 106, 165);
+}
+
+::placeholder {
+  color: rgb(127, 179, 212);
+  opacity: 1;
+}
+
+.form .body .form-row input:focus{
+	background-color: rgb(197, 221, 232);
+	border: 1px solid #555;
+	transition: all .2s ease-in-out;
+}
+
+.alert {
+  padding: 20px;
+  background-color: rgb(231, 238, 246);
+  width: 300px;
+  height:50px;
+  margin: 5px;
+  margin-top: 10px;
+  font-size: 15px;
+  text-align: right;
+  color: rgb(127, 179, 212);
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+
+  color: white;
+  text-align: center;
+  padding: 3px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  background: rgb(80, 143, 171);
+  float: left;
+  border-radius: 40%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: blue;
+}
+
+.form .body > div.login{
+	left: 50%;
+}
+
+.form .body > div.signup{
+	left: 200%;
+}
+
+.form .body.active > div.login{
+	left: -100%;
+}
+
+.form .body.active > div.signup{
+	left: 50%;
+}
+
+.navStyle {
+  background-color: rgb(231, 238, 246);
+  box-shadow: 0px 10px 5px rgba(128, 128, 128, 0.575);
+  height: 80px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.bottomNav {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 9999;
+  background-color: rgb(231, 238, 246);
+  box-shadow: 0px -5px 5px rgba(128, 128, 128, 0.575);
+  height: 80px;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  display: none;
+}
+
+
+.headerStyle {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.navBar-items {
+  font-size: large;
+}
+
+#btn {
+  width: 150px;
+  color: rgb(24, 106, 165);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+  margin-top: 5px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider.round {
+  border-radius: 30px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 0px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #79b7eb;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+}
+
+#topContainer .active {
+  display: none;
+}
+
+.flex-container .item {
+  align-self: center;
+}
+
+.active .flex-container {
+  display: none;
+}
+
+.flex-left-item {
+  position: absolute;
+  left: 3%;
+}
+
+.flex-right-item {
+  position: absolute;
+  right: calc(300px - 1.8em);
+}
+
+.container {
+  font-size: 0.8em;
+  padding: 1.8em;
+  width: calc(100% - 300px - 8em);
+  max-width: 1000px;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  float: right;
+  flex-wrap: wrap;
+
+}
+
+.cont {
+  display: flex;
+  position: relative;
+  padding-left: 35px;
+  margin-top: 1px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: rgb(127, 179, 212);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: right;
+}
+
+.cont input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  float: right;
+  right: 100px;
+}
+
+
+.checkmark {
+  position: absolute;
+  float: right;
+  right: 10px;
+  top: 0;
+  left: 0;
+  height: 12px;
+  width: 12px;
+  background-color: rgb(231, 238, 246);
+  margin-top: .5em;
+
+}
+
+
+.cont:hover input ~ .checkmark {
+  background-color: #ccc;
+
+}
+
+.cont input:checked ~ .checkmark {
+  background-color: rgb(24, 106, 165);
+
+}
+
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+
+}
+
+
+.cont input:checked ~ .checkmark:after {
+  display: block;
+
+}
+
+
+#label{
+  margin-right: 2.2em;
+  font-size: .8em;
+}
